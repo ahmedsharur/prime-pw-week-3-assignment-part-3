@@ -30,15 +30,18 @@ console.log(supplyChanges);
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
 //    - if it is a positive number (greater than 0), log 'Added x parts.'
-//    - if the value is 0, skip it. Do not log it to the console.
-//    - if the value is negative, format the log as 'Part count -x.'
+//    - if the value is 0, log 'No Change.'
+//    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
 for(let i = 0; i < supplyChanges.length; i++){
   if (supplyChanges[i] > 0){
     console.log(`Added ${supplyChanges[i]} parts`)
   }
-  else if (supplyChanges[i] < 0) {
-    console.log(`Added ${supplyChanges[i]} parts`)
+  else if(supplyChanges[i] === 0){
+    console.log(`No change`)
+  }
+  else{
+    console.log(`Removed ${supplyChanges[i]} parts`)
   }
 }
 
@@ -50,8 +53,12 @@ for (let supply of supplyChanges){
   if (supply > 0){
     console.log(`Added ${supply} parts`);
   }
-  else if (supply < 0){
-    console.log(`Added ${supply} parts`);
+  else if (supply === 0){
+    console.log(`No change`)
+  }
+
+  else {
+    console.log(`Removed ${supply} parts`);
   }
 }
 
@@ -62,8 +69,11 @@ while (y < supplyChanges.length){
   if (supplyChanges[y] > 0){
     console.log(`Added ${supplyChanges[y]} parts`)
   }
-  else if (supplyChanges[y] < 0) {
-    console.log(`Added ${supplyChanges[y]} parts`)
+  else if(supplyChanges[y] === 0){
+    console.log(`No change`)
+  }
+  else {
+    console.log(`Removed ${supplyChanges[y]} parts`)
   }
   y++;
 }
